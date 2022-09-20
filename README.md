@@ -4,7 +4,7 @@
 * What wallets are out there
 * Using metamasks
 * Creating a public-private key pair
-* Connecting to ropsten testnet
+* Connecting to Goerli testnet
 * Funding via a Faucet
 * Sending a ETH transaction
 ## How ethereum works
