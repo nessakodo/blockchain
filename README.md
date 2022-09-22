@@ -23,8 +23,7 @@
 * (Review) Contract structure
 * (Review) Variables
 * (Review) Storage
-* What are interfaces
-* What are contracts, indeed
+* What are objects (contracts and interfaces)
 * Multiple objects per file
 ### References
 https://docs.soliditylang.org/en/latest/grammar.html
