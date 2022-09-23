@@ -73,6 +73,15 @@ contract HelloWorld {
 # Homework
 * Create Github Issues with your questions about this lesson
 * Read the references
+* Prepare your environment for next week:
+  * [Node](https://nodejs.org/en/docs/guides/getting-started-guide/)
+  * [NPM](https://docs.npmjs.com/cli/v8/configuring-npm/install)
+  * [Yarn](https://yarnpkg.com/getting-started)
+  * [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+  * [VS Code](https://code.visualstudio.com/docs/setup/setup-overview)
+* Create a free account on [infura](https://infura.io/)
+* Create a free account on [alchemy](https://www.alchemy.com/)
+* Create a free account on [etherscan](https://etherscan.io/register)
 
 # Weekend Project
 * Form groups of 3 to 5 students
