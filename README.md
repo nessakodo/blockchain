@@ -128,11 +128,11 @@ yarn init -2
 git init
 yarn add hardhat --dev
 yarn hardhat init
-    "Create an advanced sample project that uses TypeScript"
+    "Create a TypeScript project"
     ...
     .gitignore? Y
 yarn add --dev [list of suggested dev dependencies above]
-Yarn add chai
+yarn add mocha --dev
 code .
 ```
 ### Recommended extensions
@@ -150,6 +150,17 @@ _.mocharc.json_ file:
   "_": ["tests/**/*.ts"]
 }
 </code></pre>
+<pre><code>
+// Renaming "test" folder
+mv test tests
+</code></pre>
+<pre><code>
+// Setting up yarn sdk for vscode
+yarn dlx @yarnpkg/sdks vscode
+// Press ctrl+shift+p in a TypeScript file
+// Choose "Select TypeScript Version"
+// Pick "Use Workspace Version"
+</code></pre>
 _hardhat.config.ts_ file:
 <pre><code>{
 const config: HardhatUserConfig = {
@@ -160,13 +171,10 @@ const config: HardhatUserConfig = {
 }
 </code></pre>
 _tsconfig.json_ file:
-<pre><code>{
-const config: HardhatUserConfig = {
+<pre><code>
 ...
   "include": ["./scripts", "./tests", "./typechain"],
 ...
-  }
-}
 </code></pre>
 Run command in root project folder:
 
