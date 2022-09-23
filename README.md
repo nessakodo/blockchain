@@ -3,7 +3,7 @@
 * Tooling:
   * [Node](https://nodejs.org/en/docs/guides/getting-started-guide/)
   * [NPM](https://docs.npmjs.com/cli/v8/configuring-npm/install)
-  * [Yarn](https://classic.yarnpkg.com/lang/en/docs/getting-started/)
+  * [Yarn](https://yarnpkg.com/getting-started/install)
   * [Git CLI](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
   * [VS Code](https://code.visualstudio.com/docs/setup/setup-overview)
 * Services
@@ -123,7 +123,7 @@ https://hardhat.org/guides/typescript.html
 https://hardhat.org/guides/vscode-tests.html
 ### Steps
 ```
-yarn init
+yarn init -2
     ...
 git init
 yarn add hardhat --dev
