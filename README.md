@@ -11,9 +11,6 @@
   * [alchemy](https://www.alchemy.com/)
   * [etherscan](https://etherscan.io/register)
 
-# Homework
-* Create Github Issues with your questions about this lesson
-* Read the references
 ## Programming setup
 * Reference repository
 * NPM and Yarn
