@@ -155,7 +155,7 @@ _.mocharc.json_ file:
 // Renaming "test" folder
 mv test tests
 </code></pre>
-<pre><code>If using Yarn Berry:
+<pre><code>If using Yarn Berry with PnP:
 // Setting up yarn sdk for vscode
 yarn dlx @yarnpkg/sdks vscode
 // Press ctrl+shift+p in a TypeScript file
