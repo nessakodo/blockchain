@@ -41,7 +41,7 @@ yarn install
 ### Output example
 ```
 yarn compile
-yarn run v1.22.18
+...
 $ hardhat compile
 ...
 Compiled 267 Solidity files successfully
@@ -72,7 +72,7 @@ Done in 18.79s.
 ### Test example
 ```
 yarn test .\test\token\ERC20\ERC20.test.js
-yarn run v1.22.18
+...
 $ hardhat test .\test\token\ERC20\ERC20.test.js
 ...
   76 passing (5s)
@@ -89,7 +89,7 @@ code .\contracts\token\ERC20\ERC20.sol
 </code></pre>
 ```
 yarn test .\test\token\ERC20\ERC20.test.js
-yarn run v1.22.18
+...
 $ hardhat test .\test\token\ERC20\ERC20.test.js
 ...
 Compiled 28 Solidity files successfully
@@ -123,7 +123,7 @@ https://hardhat.org/guides/typescript.html
 https://hardhat.org/guides/vscode-tests.html
 ### Steps
 ```
-yarn init -2
+yarn init
     ...
 git init
 yarn add hardhat --dev
@@ -150,11 +150,11 @@ _.mocharc.json_ file:
   "_": ["tests/**/*.ts"]
 }
 </code></pre>
-<pre><code>
+<pre><code>Suggested renaming:
 // Renaming "test" folder
 mv test tests
 </code></pre>
-<pre><code>
+<pre><code>If using Yarn Berry:
 // Setting up yarn sdk for vscode
 yarn dlx @yarnpkg/sdks vscode
 // Press ctrl+shift+p in a TypeScript file
@@ -174,12 +174,20 @@ _tsconfig.json_ file:
 <pre><code>
 ...
   "include": ["./scripts", "./tests", "./typechain"],
+  "files": ["./hardhat.config.ts"],
 ...
 </code></pre>
-Run command in root project folder:
+Create env file in root project folder
+
+_.env_ file:
 
 ```
-cp .\.env.example .env
+MNEMONIC="here is where your twelve words mnemonic should be put my friend"
+PRIVATE_KEY="<your private key here if you don't have a mnemonic seed>"
+INFURA_API_KEY="********************************"
+INFURA_API_SECRET="********************************"
+ALCHEMY_API_KEY="********************************"
+ETHERSCAN_API_KEY="********************************"
 ```
 
 Edit the environment with your keys:
@@ -190,8 +198,24 @@ code .env
 
 Test it out:
 ```
- yarn hardhat accounts 
+ yarn hardhat compile 
  yarn hardhat test 
+```
+
+Accounts task:
+```
+task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
+  const accounts = await hre.ethers.getSigners();
+
+  for (const account of accounts) {
+    console.log(account.address);
+  }
+});
+```
+
+Test it out:
+```
+ yarn hardhat accounts 
 ```
 ## Coding in VS Code
 * Syntax for typescript scripts
