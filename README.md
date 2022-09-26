@@ -122,10 +122,11 @@ https://hardhat.org/guides/typescript.html
 
 https://hardhat.org/guides/vscode-tests.html
 ### Steps
+Using Yarn Berry:
 ```
-yarn init
+yarn init -2
     ...
-git init
+yarn config set nodeLinker node-modules
 yarn add hardhat --dev
 yarn hardhat init
     "Create a TypeScript project"
