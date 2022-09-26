@@ -26,9 +26,9 @@ https://github.com/OpenZeppelin/openzeppelin-contracts
 
 https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line
 
-https://classic.yarnpkg.com/en/docs/getting-started
+https://yarnpkg.com/getting-started
 
-https://classic.yarnpkg.com/en/docs/cli/
+https://yarnpkg.com/getting-started/usage
 
 https://code.visualstudio.com/docs
 
