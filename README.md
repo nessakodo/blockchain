@@ -11,7 +11,7 @@
 * Script for giving voting rights to a given address
 * Dealing with transactions in scripts
 ### References
-https://www.typescripttutorial.net/typescript-tutorial/typescript-hello-world/
+https://hardhat.org/hardhat-runner/docs/guides/typescript#running-your-tests-and-scripts-directly-with--ts-node
 
 https://nodejs.org/docs/latest/api/process.html#processargv
 
@@ -38,11 +38,11 @@ main().catch((error) => {
 });</code></pre>
 ### Running scripts
 ```
-yarn run hardhat .\scripts\Ballot\deployment.ts
+yarn run hardhat .\scripts\Deployment.ts
 ```
 ### Running scripts with arguments
 ```
-yarn run ts-node --files .\scripts\Ballot\deployment.ts "arg1" "arg2" "arg3
+yarn run ts-node --files .\scripts\Deployment.ts "arg1" "arg2" "arg3
 ```
 
 ## Events with solidity
