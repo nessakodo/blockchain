@@ -38,7 +38,7 @@ main().catch((error) => {
 });</code></pre>
 ### Running scripts
 ```
-yarn run hardhat .\scripts\Deployment.ts
+yarn hardhat run .\scripts\Deployment.ts
 ```
 ### Running scripts with arguments
 ```
