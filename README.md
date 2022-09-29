@@ -121,8 +121,21 @@ https://hardhat.org/getting-started/
 https://hardhat.org/guides/typescript.html
 
 https://hardhat.org/guides/vscode-tests.html
+
 ### Steps
-Using Yarn Berry:
+* Creating a new project named `project`:
+```// Exit your working folder:
+cd ..
+// Alternativelly you could pick a directory in another place, like "cd ~/desktop"
+
+// Create a new folder called "project"
+mkdir project
+
+// Enter that folder
+cd project
+```
+
+* Starting a new project using Yarn Berry:
 ```
 yarn init -2
     ...
