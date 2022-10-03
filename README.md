@@ -3,6 +3,8 @@
 * Overview about Ethereum Improvement Proposals (EIPs)
 * Overview about Application-level standards and conventions (ERCs)
 * Explain about OpenZeppelin Contracts library
+* (Review) Objects in smart contracts
+* Inheritance overview
 * Overview about ERC20
 * Overview about ERC721
 * Using OpenZeppelin wizard
@@ -16,6 +18,10 @@ https://docs.openzeppelin.com/contracts/4.x/
 https://docs.openzeppelin.com/contracts/4.x/erc20
 
 https://docs.openzeppelin.com/contracts/4.x/erc721
+
+https://docs.soliditylang.org/en/latest/contracts.html#inheritance
+
+https://solidity-by-example.org/inheritance/
 
 https://docs.openzeppelin.com/contracts/4.x/wizard
 
