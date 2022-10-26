@@ -68,12 +68,12 @@ contract HelloWorld {
         return "Hello World";
     }
 
-    function _isPure() internal view returns (bool _check) {
-        _check = keccak256(bytes(text)) == keccak256(bytes(pureText()));
+    function _isPure() internal view returns (bool check_) {
+        check_ = keccak256(bytes(text)) == keccak256(bytes(pureText()));
     }
 
-    function isPure() public view returns (bool _returnValue) {
-        _returnValue = _isPure();
+    function isPure() public view returns (bool returnValue_) {
+        returnValue_ = _isPure();
     }
 
     function _restore() internal {
