@@ -4,9 +4,11 @@
 * Fallback and receive functions
 * External calls
 ### References
-https://docs.soliditylang.org/en/latest/control-structures.html#external-function-calls
-
 https://solidity-by-example.org/function-selector/
+
+https://docs.soliditylang.org/en/latest/contracts.html#receive-ether-function
+
+https://docs.soliditylang.org/en/latest/control-structures.html#external-function-calls
 
 ## Using interfaces
 * Fallback and receive functions
