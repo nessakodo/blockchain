@@ -187,7 +187,7 @@ const config: HardhatUserConfig = {
 _tsconfig.json_ file:
 <pre><code>
 ...
-  "include": ["./scripts", "./tests", "./typechain"],
+  "include": ["./scripts", "./tests", "./typechain-types"],
   "files": ["./hardhat.config.ts"],
 ...
 </code></pre>
