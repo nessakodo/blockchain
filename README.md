@@ -10,6 +10,8 @@ https://hardhat.org/hardhat-runner/docs/advanced/scripts
 
 https://hardhat.org/hardhat-runner/docs/guides/typescript#running-your-tests-and-scripts-directly-with--ts-node
 
+https://nodejs.org/docs/latest/api/process.html#processargv
+
 <pre><code>import { ethers } from "hardhat";
 
 const PROPOSALS = ["Proposal 1", "Proposal 2", "Proposal 3"];
@@ -46,7 +48,7 @@ yarn run ts-node --files .\scripts\Deployment.ts "arg1" "arg2" "arg3
 * Transaction receipts and async complexities when running onchain
 
 ### References
-https://nodejs.org/docs/latest/api/process.html#processargv
+https://www.npmjs.com/package/dotenv
 
 https://docs.ethers.io/v5/api/providers/
 
