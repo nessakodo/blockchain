@@ -66,8 +66,28 @@ https://docs.openzeppelin.com/contracts/4.x/access-control
 * (Review) Providers
 * (Review) Async operations
 * (Review) Running scripts on test environment
-* Contract factory and json imports
-* Transaction receipts and async complexities when running onchain
+* (Review) Contract factory and json imports
+* (Review) Transaction receipts and async complexities when running onchain
+
+## Events with solidity
+* Event syntax
+* Event storage
+* Event indexing
+* Topics and filters
+* Transaction structure
+* State changes with events
+### References
+https://docs.soliditylang.org/en/latest/contracts.html#events
+
+https://dev.to/hideckies/ethers-js-cheat-sheet-1h5j
+
+## Watching for events in tests
+* Event syntax with Hardhat Chai Matchers
+* Triggering an event
+* Checking arguments
+### References
+https://hardhat.org/hardhat-chai-matchers/docs/overview#events
+
 # Homework
 * Create Github Issues with your questions about this lesson
 * Read the references
