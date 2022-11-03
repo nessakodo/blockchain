@@ -1,4 +1,4 @@
-# Lesson 8 - Scripts for Ballot.sol and events
+# Lesson 8 - Scripts for Ballot.sol 
 ## Using scripts to automate operations
 * Running a script with yarn and node, ts-node and/or hardhat
 * Ballot deployment  script
