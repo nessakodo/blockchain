@@ -1,7 +1,9 @@
 import { ethers } from "hardhat";
+import * as dotenv from 'dotenv'; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 import { Ballot__factory } from "../typechain-types";
-import * as dotenv from 'dotenv';
 dotenv.config();
+// import express from 'express'  
+
 
 function convertStringArrayToBytes32(array: string[]) {
   const bytes32Array = [];
@@ -14,6 +16,8 @@ function convertStringArrayToBytes32(array: string[]) {
 async function main() {
   console.log("Deploying Ballot Contract");
   console.log("Proposals: ");
+  const contractAddress = process.argv[2];
+  // const targetAddress = process.argv[3];
   const proposals = process.argv.slice(2);
   proposals.forEach((element, index) => {
     console.log(`Proposal N. ${index + 1}; ${element}`);
@@ -27,7 +31,7 @@ async function main() {
   console.log(`This address has a balance of ${balance} wei`);
   if (balance.eq(0)) throw new Error("I'm too poor");
   const ballotContractFactory = new Ballot__factory(signer);
-  const ballotContract = await ballotContractFactory.deploy(
+  const ballotContract = await ballotContractFactory.attach(
     convertStringArrayToBytes32(proposals)
   );
   await ballotContract.deployed();
