@@ -23,8 +23,8 @@ async function main() {
     console.log(`Proposal N. ${index + 1}; ${element}`);
   });
   process.env.MY_PRIVATE_KEY;
-  const provider = ethers.getDefaultProvider("goerli", {alchemy: process.env.ALCHEMY_API_KEY});
-  const wallet = ethers.Wallet.fromMnemonic(process.env.MNEMONIC ?? "");
+  const provider = ethers.getDefaultProvider("goerli");
+  const wallet = ethers.Wallet.fromMnemonic(process.env.MNEMONIC?);
   const signer = wallet.connect(provider);
   console.log(`Connected to the wallet ${signer.address}`);
   const balance = await signer.getBalance();
