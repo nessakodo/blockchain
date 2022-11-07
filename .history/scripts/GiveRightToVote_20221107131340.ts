@@ -18,9 +18,9 @@ async function main() {
     contractAddress
   );
   const tx = await ballotContract.giveRightToVote(targetAddress);
-  // await tx.wait();
-  console.log("Done!");
-  console.log(tx.hash);
+  await tx.wait();
+  console.log("Done!")
+  console.log(tx.hash)
 }
 
 main().catch((error) => {

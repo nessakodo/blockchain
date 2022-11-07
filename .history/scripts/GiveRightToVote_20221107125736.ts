@@ -7,7 +7,7 @@ async function main() {
   const contractAddress = process.argv[2];
   const targetAddress = process.argv[3];
   const provider = ethers.getDefaultProvider("goerli", {alchemy: process.env.ALCHEMY_API_KEY});
-  const wallet = new ethers.Wallet(process.env.PRIVATE_KEY ?? "");
+  const wallet = ethers.Wallet.fromMnemonic(process.env.MNEMONIC ?? "");
   const signer = wallet.connect(provider);
   console.log(`Connected to the wallet ${signer.address}`);
   const balance = await signer.getBalance();
@@ -18,9 +18,9 @@ async function main() {
     contractAddress
   );
   const tx = await ballotContract.giveRightToVote(targetAddress);
-  // await tx.wait();
-  console.log("Done!");
-  console.log(tx.hash);
+  await tx.wait();
+  console.log("Done!")
+  console.log(tx.hash)
 }
 
 main().catch((error) => {
