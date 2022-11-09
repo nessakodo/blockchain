@@ -1,5 +1,6 @@
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { expect } from "chai";
+import { BigNumber } from "ethers";
 import { ethers } from "hardhat";
 import {
   MyERC20,
@@ -11,7 +12,7 @@ import {
 
 
 
-const TEST_RATIO = 1;
+const TEST_RATIO = 5;
 
 describe("NFT Shop", async () => {
   let tokenSaleContract: TokenSale;
@@ -40,11 +41,10 @@ describe("NFT Shop", async () => {
       paymentTokenContract.address
       );
     await tokenSaleContract.deployed();
-    
     const MINTER_ROLE = await paymentTokenContract.MINTER_ROLE();
     const roleTx = await paymentTokenContract.grantRole(
       MINTER_ROLE, 
-      paymentTokenContract.address
+      tokenSaleContract.address
     );
     await roleTx.wait();
   });
@@ -65,21 +65,32 @@ describe("NFT Shop", async () => {
     });
   });
 
-  describe("When a user purchase an ERC20 from the Token contract", async () => {
+  describe("When a user purchases an ERC20 from the Token contract", async () => {
     const buyValue = ethers.utils.parseEther("1");
+    let ethBalanceBefore: BigNumber;
+
     beforeEach(async () => {
-    const tx = await tokenSaleContract
-    .connect(accounts[1])
-    .buyTokens({value: buyValue});
-  await tx.wait();
-  });
+      ethBalanceBefore = await accounts[1].getBalance();
+      const tx = await tokenSaleContract
+        .connect(accounts[1])
+        .buyTokens({ value: buyValue });
+      await tx.wait();
+    });
 
     it("charges the correct amount of ETH", async () => {
-      throw new Error("Not implemented");
+      const ethBalanceafter = await accounts[1].getBalance();
+      const diff = ethBalanceBefore.sub(ethBalanceafter);
+      const expectDiff = buyValue
+      const error = diff.sub(expectDiff);
+      expect(error).to.eq(0);
     });
 
     it("gives the correct amount of tokens", async () => {
-      throw new Error("Not implemented");
+      const tokenBalance = await paymentTokenContract.balanceOf(
+        accounts[1].address
+      );
+      const expectedBalance = buyValue.div(TEST_RATIO);
+      expect(tokenBalance).to.eq(expectedBalance);
     });
   });
 
