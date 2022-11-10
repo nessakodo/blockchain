@@ -1,3 +1,6 @@
-solution
-7pm
-9pm
+#ignore private keys
+.env
+node_modules
+typechain-types
+artifacts
+cache
