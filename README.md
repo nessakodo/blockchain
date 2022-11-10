@@ -56,7 +56,7 @@ contract MyToken is ERC20, AccessControl, ERC20Permit, ERC20Votes {
     }
 }</code></pre>
 ## ERC20Votes and Ballot.sol
-* (Review) TDD
+* (Review) Testing features with scripts
 * Mapping scenarios
 * Contracts structure
 
