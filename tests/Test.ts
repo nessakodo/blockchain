@@ -24,7 +24,7 @@ describe("NFT Shop", async () => {
   let erc721ContractFactory: MyERC721__factory;
   let tokenSaleContractFactory: TokenSale__factory;
   let accounts: SignerWithAddress[];
-})
+  
   beforeEach(async () => {
      [
       accounts,
@@ -161,6 +161,7 @@ describe("NFT Shop", async () => {
       });
     });
   });
+});
 
 
 

@@ -1,3 +1,13 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
+
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+// import {owner} from "@openzeppelin/contracts/access/Ownable.sol";
+
 interface IMyERC20 is IERC20 {
     function mint(address to, uint256 amount) external;
 
@@ -10,7 +20,7 @@ interface IMyERC721 {
     function burnFrom(uint256 tokenId) external;
 }
 
-
+contract TokenSale {
     uint256 public ratio;
     uint256 public price;
     IMyERC20 public paymentToken;
@@ -46,7 +56,9 @@ function buyTokens() external payable {
         withdrawableAmount += price / 2;
     }
 
-    function withdraw(uint256 amount) external onlyOwner {
-        withdrawableAmount -= amount;
-        paymentToken.transfer(owner(), amount);
-    }
+    // function withdraw(uint256 amount) external onlyOwner {
+    //     withdrawableAmount -= amount;
+    //     paymentToken.transfer(owner(), amount);
+    // }
+}
+
